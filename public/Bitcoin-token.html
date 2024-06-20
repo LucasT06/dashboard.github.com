@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Bitcoin Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div class="center-nav background container-fluid">
+            <br/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="hamburger hamburger-meneu" src="img/hamburger.png" alt="Hamburger Menu" />
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Home</a></li>
+                            <li><a class="dropdown-item" href="#">About</a></li>
+                            <li><a class="dropdown-item" href="#">Services</a></li>
+                            <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                            <li><a class="dropdown-item" href="#">Team</a></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <ul class="nav" role="tablist">
+                            <li class="">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li class="">
+                                <a class="nav-link" href="chat.html">Chat bot</a>
+                            </li>
+                            <li class="">
+                                <a class="nav-link" href="support.html">Support</a>
+                            </li>
+                            <li class="">
+                                <a class="nav-link active" href="#">Dashboard</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Gemiddelde Bedrag</h2>
+                    <canvas class="border line-chart"></canvas>
+                    <button class="hour-btn">Uur</button>
+                    <button class="week-btn">Week</button>
+                    <button class="year-btn">Jaar</button>
+                </div>
+                <div class="col-md-6">
+                    <h2>Gemiddelde Transacties</h2>
+                    <canvas id="bar-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/bitcoin.js"></script>
+</body>
+</html>
